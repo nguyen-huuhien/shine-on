@@ -29,6 +29,10 @@ app.get("/proxy-image", async (req, res) => {
   }
 });
 
+app.get("/ping", async (req, res) => {
+  res.status(200).send("ok");
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
 });
