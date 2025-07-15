@@ -71,6 +71,40 @@
                 </div>
             </div>
             <br>
+
+            <h2>Team 1 New</h2>
+            <div class="container-team-1">
+                <div class="row">
+                    <div class="col-3">
+                        <span>Product</span>
+                        <div class="input-group-prepend">
+                            <form>
+                                <select id="products-team-1-new" name="products" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="All-14S">All-14S</option>
+                                    <option value="All-14L">All-14L</option>
+                                    <option value="All-18S">All-18S</option>
+                                    <option value="All-18L">All-18L</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <span>Link</span>
+                        <div class="input-group">
+                            <input type="text" id="background-src-url-team-1-new" class="form-control">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary"
+                                    onclick="downloadImages('products-team-1-new', 'background-src-url-team-1-new')">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
             <h2>Team 2</h2>
             <div class="container-team-2">
                 <div class="row">
@@ -411,6 +445,44 @@
             return codes;
         }
 
+
+        function getAll14SCodes() {
+            const codes = new Map();
+            codes.set('LK-14S', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/6.png', 12147, 12134, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/LoveKnot/ANHDC.png', 12158, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/LoveKnot/ANHMAU1.png']);
+            codes.set('FL-14S', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/4.png', 5125, 2272, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/ForeverLove/ANHDC1.png', 8852, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/ForeverLove/ANHMAU1.png']);
+            codes.set('IL-14S', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/8.png', 12260, 12263, 17537, 12252, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/INTERLOCKINGHEART/ANHMAU1.png']);
+            codes.set('AL-14S', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/2.png', 12211, 12201, 12215, 12210, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/AlluringBeauty/ANHMAU1.png']);
+            return codes;
+        }
+
+
+        function getAll14LCodes() {
+            const codes = new Map();
+            codes.set('LK-14L', [12171, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/6.png', 12173, 12671, 12166, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/LoveKnot/ANHMAU3.png']);
+            codes.set('FL-14L', [9202, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/4.png', 5545, 17197, 9233, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/ForeverLove/ANHMAU2.png']);
+            codes.set('IL-14L', [12288, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/8.png', 12274, 12272, 14254, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/INTERLOCKINGHEART/ANHMAU3.png']);
+            codes.set('AL-14L', [12237, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/2.png', 12235, 12222, 12219, 12043]);
+            return codes;
+        }
+
+        function getAll18SCodes() {
+            const codes = new Map();
+            codes.set('LK-18S', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/5.png', 17967, 17968, 12072, 12744, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/LoveKnot/ANHMAU5.png']);
+            codes.set('FL-18S', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/3.png', 13442, 13444, 2283, 9366, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/ForeverLove/ANHMAU1.png']);
+            codes.set('IL-18S', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/7.png', 12102, 12608, 12077, 12774, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/INTERLOCKINGHEART/ANHMAU5.png']);
+            codes.set('AL-18S', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/1.png', 12112, 12606, 12413, 12629, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/AlluringBeauty/ANHMAU3.png']);
+            return codes;
+        }
+
+        function getAll18LCodes() {
+            const codes = new Map();
+            codes.set('LK-18L', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/5.png', 15015, 12610, 12745, 12025, 12387]);
+            codes.set('FL-18L', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/3.png', 5621, 9213, 13447, 1731, 13449]);
+            codes.set('IL-18L', [12105, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/7.png', 12110, 12777, 12105, 'https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/INTERLOCKINGHEART/ANHMAU6.png']);
+            codes.set('AL-18L', ['https://hehehehsss.s3.us-east-2.amazonaws.com/product-background/common-image/1.png', 12122, 12123, 12117, 12768, 12128]);
+            return codes;
+        }
+
         function getLuckyInLoveCodesTeam1() {
             const codes = new Map();
             codes.set('14S', [17471, 13527, 9775, 9752, 9756, 9758]);
@@ -734,6 +806,18 @@
                     break;
                 case "interlocking-hearts-team-1":
                     codes = this.getInterlockingHeartsCodesTeam1();
+                    break;
+                case "All-14S":
+                    codes = this.getAll14SCodes();
+                    break;
+                case "All-14L":
+                    codes = this.getAll14LCodes();
+                    break;
+                case "All-18S":
+                    codes = this.getAll18SCodes();
+                    break;
+                case "All-18L":
+                    codes = this.getAll18LCodes();
                     break;
                 case "lucky_in_love-team-1":
                     codes = this.getLuckyInLoveCodesTeam1();
